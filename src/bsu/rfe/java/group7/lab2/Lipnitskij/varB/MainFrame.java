@@ -148,15 +148,13 @@ public class MainFrame extends JFrame
 		Box hboxResult = Box.createHorizontalBox();
 		hboxResult.add(Box.createHorizontalGlue());
 		hboxResult.add(labelResult);
-		//hboxResult.add(Box.createHorizontalStrut(10));
-		//hboxResult.add(TRF);
 		hboxResult.add(Box.createHorizontalGlue());
 		hboxResult.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
 		JButton buttonCalc = new JButton("Вычислить");
 		buttonCalc.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent ev) {
-			try {
+			 {
 				x = Double.parseDouble(TFX.getText());
 				y = Double.parseDouble(TFY.getText());
 				z = Double.parseDouble(TFZ.getText());
@@ -166,9 +164,7 @@ public class MainFrame extends JFrame
 		        else
 	                	result = formula2(x, y,z);
 				labelResult.setText(result.toString());
-		        } catch (NumberFormatException ex) {
-		        	JOptionPane.showMessageDialog(MainFrame.this, "Ошибка в формате записи числа с плавающей точкой", "Ошибочный формат числа",JOptionPane.WARNING_MESSAGE);
-		        	}
+		        } 
 		   }
 		});
 
